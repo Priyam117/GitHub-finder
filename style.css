@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  border-radius: 10px;
+  border: 1px solid navy;
+  color: navy;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: .8em;
+  box-shadow: inset 1px 1px 6px skyblue, inset 2px 2px 6px skyblue;
+}
+form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 20vh;
+}
+form input {
+  box-shadow: inset 1px 1px 5px skyblue, inset 2px 2px 5px skyblue;
+  width: 100ch;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: transparent;
+  color: black;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+form button {
+  border: 2px solid navy;
+  background-color: navy;
+  color: white;
+  padding: 0.5rem 1rem;
+  margin: .7rem;
+  border-radius: 7px;
+  transition: all 0.1s ease-in-out;
+}
+
+form button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  background-color: rgb(11, 183, 11);
+  color: white;
+  border: 2px solid rgb(11, 183, 11);
+}
+
+#cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#cardContainer div {
+  margin: 2rem;
+  padding: 1rem;
+  box-shadow: 3px 3px 10px navy;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  filter: drop-shadow(4px 4px 10px 10px black);
+}
+
+a {
+  text-decoration: none;
+  color: navy;
+  padding: 0.5rem .8rem;
+  box-shadow: inset 1px 1px 9px skyblue, inset 2px 2px 9px skyblue;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+h2 {
+  margin-top: 1rem;
+}
