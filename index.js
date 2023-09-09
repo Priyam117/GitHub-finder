@@ -23,13 +23,17 @@ function getUser(searchValue) {
           const heading = document.createElement("h2");
           const img = document.createElement("img");
           const link = document.createElement("a");
+          const allRepo = document.createElement("a");
           link.innerHTML = "Github Link";
           heading.innerText = ele.login;
           img.src = ele.avatar_url;
           link.href = ele.html_url;
+          allRepo.innerText = "GItHub Repository";
+          allRepo.href = result.url;
           card.appendChild(img);
           card.appendChild(heading);
           card.appendChild(link);
+          card.appendChild(allRepo);
           cardContainer.appendChild(card);
         });
       } else {
@@ -37,20 +41,26 @@ function getUser(searchValue) {
         console.log(result);
         if (result.message === "Not Found") {
           const heading = document.createElement("h1");
-          heading.innerText = "Dhang ka search kr le naa !!!!";
+          heading.innerText = "Please provide a valid username";
           cardContainer.appendChild(heading);
         } else {
           const card = document.createElement("div");
           const heading = document.createElement("h2");
           const img = document.createElement("img");
           const link = document.createElement("a");
+          const allRepo = document.createElement("a");
+          // const bio = document.createElement("p");
+          // const location = document.createElement("p");
           link.innerHTML = "Github Link";
+          allRepo.innerText = "GItHub Repository";
+          allRepo.href = result.url;
           heading.innerText = result.login;
           img.src = result.avatar_url;
           link.href = result.html_url;
           card.appendChild(img);
           card.appendChild(heading);
           card.appendChild(link);
+          card.appendChild(allRepo);
           cardContainer.appendChild(card);
         }
       }
@@ -68,5 +78,3 @@ getAllUsers.addEventListener("click", (e) => {
   cardContainer.innerHTML = "";
   getUser();
 });
-
-getUser();
